@@ -28,8 +28,7 @@ function setup() {
   spaceship2=createSprite(1100,250);
 
   luckyShip = Math.round(random(1,2));
-  console.log(luckyShip);
-  
+
   badPeopleGroup = new Group();
   goodPeopleGroup = new Group();
 
@@ -59,7 +58,7 @@ if(gameState==="play"){
 
 //good people to move to left ship
   if(keyDown(LEFT_ARROW)){
-    console.log("good");
+    
    
 
     for (var i=0;i<goodPeopleGroup.size();i++){
@@ -71,7 +70,7 @@ if(gameState==="play"){
 }
 
 if(keyDown(RIGHT_ARROW)){
-    console.log("bad");
+    
    
     
 
@@ -81,7 +80,7 @@ if(keyDown(RIGHT_ARROW)){
       beep.play();    
 }
 }
-if(ship1Count===5 || ship2Count===5){
+if(ship1Count===25 || ship2Count===25){
  if(luckyShip===1){
    gameState= "won";
    win.play();
